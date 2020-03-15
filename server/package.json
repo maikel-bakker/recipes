@@ -1,0 +1,27 @@
+{
+  "name": "recipe-api-server",
+  "version": "1.0.0",
+  "description": "api endpoints for recipes",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maikel Bakker",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "dotenv-webpack": "^1.7.0",
+    "nodemon-webpack-plugin": "^4.3.1",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
