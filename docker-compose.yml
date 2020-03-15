@@ -1,0 +1,25 @@
+version: '3'
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+      - /app/node_modules
+    ports:
+      - "${APP_PORT}:9000"
+    restart: always
+    links:
+      - server
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    volumes:
+      - ./server:/server
+      - /server/node_modules
+    env_file: .env
+    ports:
+      - "${SERVER_PORT}:3002"
+    restart: always
